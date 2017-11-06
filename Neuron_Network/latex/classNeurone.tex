@@ -1,0 +1,229 @@
+\hypertarget{classNeurone}{\section{Neurone Class Reference}
+\label{classNeurone}\index{Neurone@{Neurone}}
+}
+
+
+$<$ Class of neurons objects  
+
+
+
+
+{\ttfamily \#include $<$neurone.\-hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classNeurone_a47d575ac043af29b5d3071264372d794}{Neurone} (double J\-\_\-)
+\item 
+double \hyperlink{classNeurone_a81f418a2929da23aa6122014e67e977a}{get\-Potential} () const 
+\item 
+unsigned int \hyperlink{classNeurone_a8a2f3bfb5d8ee23baa9d2762621e3378}{get\-Nb\-Spikes} () const 
+\item 
+int \hyperlink{classNeurone_a4087ddf933a030150a47021b6cfa17b9}{get\-Last\-Spike\-Time} () const 
+\item 
+int \hyperlink{classNeurone_a1ab9d547a38bae61bf5c526a76f7f570}{get\-\_\-\-I\-\_\-ext} () const 
+\item 
+double \hyperlink{classNeurone_a0a1f8d8b3d7a13ea518fb502e474674f}{get\-\_\-\-J} () const 
+\item 
+void \hyperlink{classNeurone_a756fb380904ac62b6c9484779db12285}{set\-Potential} (double new\-\_\-potential)
+\item 
+void \hyperlink{classNeurone_a326b1657899bfa55f0e739fbcf28dd33}{set\-\_\-ext\-\_\-\-I} (const double \&new\-\_\-\-I)
+\item 
+bool \hyperlink{classNeurone_a77818d9f85c5576aa6c222816aaa2639}{update} (const int \&poisson)
+\item 
+bool \hyperlink{classNeurone_a332575021e6a883b253b6d09e3f74cb6}{is\-Refractory} ()
+\item 
+void \hyperlink{classNeurone_a547dd526baaf8757443c0ff8edd3ef07}{add\-Spike\-Time} (int time)
+\item 
+void \hyperlink{classNeurone_abd2b5e812d7790520480a8f2e96cb7bc}{affiche} ()
+\item 
+void \hyperlink{classNeurone_add5643c0abaa809b78e52b24978777a2}{receive\-\_\-spike} (unsigned int time\-\_\-arrival, double j)
+\item 
+std\-::vector$<$ int $>$ \hyperlink{classNeurone_a089b4052f5bd2eb77d081ba8399a9c7a}{get\-Spikes} () const 
+\item 
+double \hyperlink{classNeurone_ac5775ec28569770d61da92bd80400bd6}{get\-\_\-spike\-\_\-buffer} (int time) const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+$<$ Class of neurons objects 
+
+This class creates a single neuron and its attributs A neuron can be excitatory of inhibitory according to the value of J it receives 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classNeurone_a47d575ac043af29b5d3071264372d794}{\index{Neurone@{Neurone}!Neurone@{Neurone}}
+\index{Neurone@{Neurone}!Neurone@{Neurone}}
+\subsubsection[{Neurone}]{\setlength{\rightskip}{0pt plus 5cm}Neurone\-::\-Neurone (
+\begin{DoxyParamCaption}
+\item[{double}]{J\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{classNeurone_a47d575ac043af29b5d3071264372d794}
+Constructor\-: initialize a neuron 
+\begin{DoxyParams}{Parameters}
+{\em J\-\_\-} & \-: the post synaptic potential the neuron gives \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classNeurone_a547dd526baaf8757443c0ff8edd3ef07}{\index{Neurone@{Neurone}!add\-Spike\-Time@{add\-Spike\-Time}}
+\index{add\-Spike\-Time@{add\-Spike\-Time}!Neurone@{Neurone}}
+\subsubsection[{add\-Spike\-Time}]{\setlength{\rightskip}{0pt plus 5cm}void Neurone\-::add\-Spike\-Time (
+\begin{DoxyParamCaption}
+\item[{int}]{time}
+\end{DoxyParamCaption}
+)}}\label{classNeurone_a547dd526baaf8757443c0ff8edd3ef07}
+Add a new time of spike to the vector times\-\_\-spike 
+\begin{DoxyParams}{Parameters}
+{\em time} & \-: the simulation time step of neuron at the moment it spiked \\
+\hline
+\end{DoxyParams}
+\hypertarget{classNeurone_abd2b5e812d7790520480a8f2e96cb7bc}{\index{Neurone@{Neurone}!affiche@{affiche}}
+\index{affiche@{affiche}!Neurone@{Neurone}}
+\subsubsection[{affiche}]{\setlength{\rightskip}{0pt plus 5cm}void Neurone\-::affiche (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classNeurone_abd2b5e812d7790520480a8f2e96cb7bc}
+Affiche des informations sur le neurone\-: the membrane resistance and the times it spiked (in ms) \hypertarget{classNeurone_a1ab9d547a38bae61bf5c526a76f7f570}{\index{Neurone@{Neurone}!get\-\_\-\-I\-\_\-ext@{get\-\_\-\-I\-\_\-ext}}
+\index{get\-\_\-\-I\-\_\-ext@{get\-\_\-\-I\-\_\-ext}!Neurone@{Neurone}}
+\subsubsection[{get\-\_\-\-I\-\_\-ext}]{\setlength{\rightskip}{0pt plus 5cm}int Neurone\-::get\-\_\-\-I\-\_\-ext (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classNeurone_a1ab9d547a38bae61bf5c526a76f7f570}
+Return the external current received by the neuron \begin{DoxyReturn}{Returns}
+\-: external current I\-\_\-ext 
+\end{DoxyReturn}
+\hypertarget{classNeurone_a0a1f8d8b3d7a13ea518fb502e474674f}{\index{Neurone@{Neurone}!get\-\_\-\-J@{get\-\_\-\-J}}
+\index{get\-\_\-\-J@{get\-\_\-\-J}!Neurone@{Neurone}}
+\subsubsection[{get\-\_\-\-J}]{\setlength{\rightskip}{0pt plus 5cm}double Neurone\-::get\-\_\-\-J (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classNeurone_a0a1f8d8b3d7a13ea518fb502e474674f}
+Return the value of J, the post synaptic potential that is passed when the neuron spikes \begin{DoxyReturn}{Returns}
+\-: J value of the neuron 
+\end{DoxyReturn}
+\hypertarget{classNeurone_ac5775ec28569770d61da92bd80400bd6}{\index{Neurone@{Neurone}!get\-\_\-spike\-\_\-buffer@{get\-\_\-spike\-\_\-buffer}}
+\index{get\-\_\-spike\-\_\-buffer@{get\-\_\-spike\-\_\-buffer}!Neurone@{Neurone}}
+\subsubsection[{get\-\_\-spike\-\_\-buffer}]{\setlength{\rightskip}{0pt plus 5cm}double Neurone\-::get\-\_\-spike\-\_\-buffer (
+\begin{DoxyParamCaption}
+\item[{int}]{time}
+\end{DoxyParamCaption}
+) const}}\label{classNeurone_ac5775ec28569770d61da92bd80400bd6}
+Returns the value of the spike buffer at a time 'time' 
+\begin{DoxyParams}{Parameters}
+{\em time} & \-: time of which we want to know the value of the buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\-: the value of the spike buffer 
+\end{DoxyReturn}
+\hypertarget{classNeurone_a4087ddf933a030150a47021b6cfa17b9}{\index{Neurone@{Neurone}!get\-Last\-Spike\-Time@{get\-Last\-Spike\-Time}}
+\index{get\-Last\-Spike\-Time@{get\-Last\-Spike\-Time}!Neurone@{Neurone}}
+\subsubsection[{get\-Last\-Spike\-Time}]{\setlength{\rightskip}{0pt plus 5cm}int Neurone\-::get\-Last\-Spike\-Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classNeurone_a4087ddf933a030150a47021b6cfa17b9}
+Return the time of the last spike that was made \begin{DoxyReturn}{Returns}
+\-: the spike time in time step of simulation 
+\end{DoxyReturn}
+\hypertarget{classNeurone_a8a2f3bfb5d8ee23baa9d2762621e3378}{\index{Neurone@{Neurone}!get\-Nb\-Spikes@{get\-Nb\-Spikes}}
+\index{get\-Nb\-Spikes@{get\-Nb\-Spikes}!Neurone@{Neurone}}
+\subsubsection[{get\-Nb\-Spikes}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Neurone\-::get\-Nb\-Spikes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classNeurone_a8a2f3bfb5d8ee23baa9d2762621e3378}
+Return the number of spikes the neuron made \begin{DoxyReturn}{Returns}
+\-: number spikes the neuron did during all simulation 
+\end{DoxyReturn}
+\hypertarget{classNeurone_a81f418a2929da23aa6122014e67e977a}{\index{Neurone@{Neurone}!get\-Potential@{get\-Potential}}
+\index{get\-Potential@{get\-Potential}!Neurone@{Neurone}}
+\subsubsection[{get\-Potential}]{\setlength{\rightskip}{0pt plus 5cm}double Neurone\-::get\-Potential (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classNeurone_a81f418a2929da23aa6122014e67e977a}
+Return membrane potential \begin{DoxyReturn}{Returns}
+\-: potential value 
+\end{DoxyReturn}
+\hypertarget{classNeurone_a089b4052f5bd2eb77d081ba8399a9c7a}{\index{Neurone@{Neurone}!get\-Spikes@{get\-Spikes}}
+\index{get\-Spikes@{get\-Spikes}!Neurone@{Neurone}}
+\subsubsection[{get\-Spikes}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$ int $>$ Neurone\-::get\-Spikes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classNeurone_a089b4052f5bd2eb77d081ba8399a9c7a}
+Returns the time\-\_\-of\-\_\-spikes vector \begin{DoxyReturn}{Returns}
+vector$<$int$>$ \-: contains all the simulation time step when the neuron spiked 
+\end{DoxyReturn}
+\hypertarget{classNeurone_a332575021e6a883b253b6d09e3f74cb6}{\index{Neurone@{Neurone}!is\-Refractory@{is\-Refractory}}
+\index{is\-Refractory@{is\-Refractory}!Neurone@{Neurone}}
+\subsubsection[{is\-Refractory}]{\setlength{\rightskip}{0pt plus 5cm}bool Neurone\-::is\-Refractory (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classNeurone_a332575021e6a883b253b6d09e3f74cb6}
+To know if the neuron is refractory or not, that is, if it spiked in 2 simulation time step \begin{DoxyReturn}{Returns}
+boolean \-: whether the neuron is refractory of not 
+\end{DoxyReturn}
+\hypertarget{classNeurone_add5643c0abaa809b78e52b24978777a2}{\index{Neurone@{Neurone}!receive\-\_\-spike@{receive\-\_\-spike}}
+\index{receive\-\_\-spike@{receive\-\_\-spike}!Neurone@{Neurone}}
+\subsubsection[{receive\-\_\-spike}]{\setlength{\rightskip}{0pt plus 5cm}void Neurone\-::receive\-\_\-spike (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{time\-\_\-arrival, }
+\item[{double}]{j}
+\end{DoxyParamCaption}
+)}}\label{classNeurone_add5643c0abaa809b78e52b24978777a2}
+Update the value of the spike received on the spike buffer 
+\begin{DoxyParams}{Parameters}
+{\em time\-\_\-arrival} & \-: the time of arrival of the spike \\
+\hline
+{\em j} & \-: the value of the intensity of the spike the neuron receives \\
+\hline
+\end{DoxyParams}
+\hypertarget{classNeurone_a326b1657899bfa55f0e739fbcf28dd33}{\index{Neurone@{Neurone}!set\-\_\-ext\-\_\-\-I@{set\-\_\-ext\-\_\-\-I}}
+\index{set\-\_\-ext\-\_\-\-I@{set\-\_\-ext\-\_\-\-I}!Neurone@{Neurone}}
+\subsubsection[{set\-\_\-ext\-\_\-\-I}]{\setlength{\rightskip}{0pt plus 5cm}void Neurone\-::set\-\_\-ext\-\_\-\-I (
+\begin{DoxyParamCaption}
+\item[{const double \&}]{new\-\_\-\-I}
+\end{DoxyParamCaption}
+)}}\label{classNeurone_a326b1657899bfa55f0e739fbcf28dd33}
+Change the external current for a neuron 
+\begin{DoxyParams}{Parameters}
+{\em new\-\_\-\-I} & \-: the new current value \\
+\hline
+\end{DoxyParams}
+\hypertarget{classNeurone_a756fb380904ac62b6c9484779db12285}{\index{Neurone@{Neurone}!set\-Potential@{set\-Potential}}
+\index{set\-Potential@{set\-Potential}!Neurone@{Neurone}}
+\subsubsection[{set\-Potential}]{\setlength{\rightskip}{0pt plus 5cm}void Neurone\-::set\-Potential (
+\begin{DoxyParamCaption}
+\item[{double}]{new\-\_\-potential}
+\end{DoxyParamCaption}
+)}}\label{classNeurone_a756fb380904ac62b6c9484779db12285}
+Change le potential of the membrane 
+\begin{DoxyParams}{Parameters}
+{\em new\-\_\-potential} & \-: the new value of the membrane potential \\
+\hline
+\end{DoxyParams}
+\hypertarget{classNeurone_a77818d9f85c5576aa6c222816aaa2639}{\index{Neurone@{Neurone}!update@{update}}
+\index{update@{update}!Neurone@{Neurone}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}bool Neurone\-::update (
+\begin{DoxyParamCaption}
+\item[{const int \&}]{poisson}
+\end{DoxyParamCaption}
+)}}\label{classNeurone_a77818d9f85c5576aa6c222816aaa2639}
+Update the state of the neuron of one simulation step 
+\begin{DoxyParams}{Parameters}
+{\em poisson} & -\/ the poisson distribution value that comes from the outside neurons \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+neurone.\-hpp\item 
+neurone.\-cpp\end{DoxyCompactItemize}

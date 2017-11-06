@@ -1,0 +1,110 @@
+\hypertarget{classNetwork}{\section{Network Class Reference}
+\label{classNetwork}\index{Network@{Network}}
+}
+
+
+$<$ Class of network of neurons  
+
+
+
+
+{\ttfamily \#include $<$network.\-hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classNetwork_a8f3b1732014562eaeb408aa18fd1f85e}{Network} (int nb\-\_\-exc\-\_\-neurons, int nb\-\_\-inh\-\_\-neurons, double g=5, double eta=2)
+\item 
+void \hyperlink{classNetwork_a3cae76dd438d3116286ac03950e4e456}{simulation} (const std\-::string \&neuro\-\_\-spikes)
+\item 
+void \hyperlink{classNetwork_a438438cda176520bb01437e0fd12e266}{pass\-\_\-spike} (const int \&simtime, int neuron\-\_\-i)
+\item 
+std\-::vector$<$ std\-::vector$<$ int $>$ $>$ \hyperlink{classNetwork_af6bbff655263ceccaad427e91c269da3}{get\-Connections} () const 
+\item 
+std\-::vector$<$ \hyperlink{classNeurone}{Neurone} $>$ \hyperlink{classNetwork_a64758887eef67f258944f11770533b9d}{get\-Network} () const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+$<$ Class of network of neurons 
+
+This class contains a certain number of neurons connected to each other according to the Brunel's paper The class initialize all neurons it will have, create its connections and simulates the interactions 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classNetwork_a8f3b1732014562eaeb408aa18fd1f85e}{\index{Network@{Network}!Network@{Network}}
+\index{Network@{Network}!Network@{Network}}
+\subsubsection[{Network}]{\setlength{\rightskip}{0pt plus 5cm}Network\-::\-Network (
+\begin{DoxyParamCaption}
+\item[{int}]{nb\-\_\-exc\-\_\-neurons, }
+\item[{int}]{nb\-\_\-inh\-\_\-neurons, }
+\item[{double}]{g = {\ttfamily 5}, }
+\item[{double}]{eta = {\ttfamily 2}}
+\end{DoxyParamCaption}
+)}}\label{classNetwork_a8f3b1732014562eaeb408aa18fd1f85e}
+Constructor\-: initialize the network vector and the connections vector 
+\begin{DoxyParams}{Parameters}
+{\em nb\-\_\-exc\-\_\-neurons} & \-: number of excitatory neurons on the network \\
+\hline
+{\em nb\-\_\-inh\-\_\-neurons} & \-: number of inhibitory neurons on the network \\
+\hline
+{\em g} & \-: g = $\vert$\-Ji/\-Je$\vert$ value \\
+\hline
+{\em eta} & \-: eta = nu\-\_\-ext/nu\-\_\-thr \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classNetwork_af6bbff655263ceccaad427e91c269da3}{\index{Network@{Network}!get\-Connections@{get\-Connections}}
+\index{get\-Connections@{get\-Connections}!Network@{Network}}
+\subsubsection[{get\-Connections}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$ std\-::vector$<$ int $>$ $>$ Network\-::get\-Connections (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classNetwork_af6bbff655263ceccaad427e91c269da3}
+Returns the 2\-D vector of connections\-: function used in testing \begin{DoxyReturn}{Returns}
+\{vector$<$vector$<$int$>$$>$\} 
+\end{DoxyReturn}
+\hypertarget{classNetwork_a64758887eef67f258944f11770533b9d}{\index{Network@{Network}!get\-Network@{get\-Network}}
+\index{get\-Network@{get\-Network}!Network@{Network}}
+\subsubsection[{get\-Network}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$ {\bf Neurone} $>$ Network\-::get\-Network (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classNetwork_a64758887eef67f258944f11770533b9d}
+Returns the vector of Neurons \-: function used in testing \begin{DoxyReturn}{Returns}
+\{vector$<$\-Neurones$>$\} 
+\end{DoxyReturn}
+\hypertarget{classNetwork_a438438cda176520bb01437e0fd12e266}{\index{Network@{Network}!pass\-\_\-spike@{pass\-\_\-spike}}
+\index{pass\-\_\-spike@{pass\-\_\-spike}!Network@{Network}}
+\subsubsection[{pass\-\_\-spike}]{\setlength{\rightskip}{0pt plus 5cm}void Network\-::pass\-\_\-spike (
+\begin{DoxyParamCaption}
+\item[{const int \&}]{simtime, }
+\item[{int}]{neuron\-\_\-i}
+\end{DoxyParamCaption}
+)}}\label{classNetwork_a438438cda176520bb01437e0fd12e266}
+Pass spike to neurons that receives a connection from neuron\-\_\-i 
+\begin{DoxyParams}{Parameters}
+{\em simtime} & \-: the actual simulation step time \\
+\hline
+{\em neuron\-\_\-i} & \-: the index of the neuron that has spiked \\
+\hline
+\end{DoxyParams}
+\hypertarget{classNetwork_a3cae76dd438d3116286ac03950e4e456}{\index{Network@{Network}!simulation@{simulation}}
+\index{simulation@{simulation}!Network@{Network}}
+\subsubsection[{simulation}]{\setlength{\rightskip}{0pt plus 5cm}void Network\-::simulation (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{neuro\-\_\-spikes}
+\end{DoxyParamCaption}
+)}}\label{classNetwork_a3cae76dd438d3116286ac03950e4e456}
+Simulate a network , updates all the neurons on the network from a t\-\_\-start to a t\-\_\-stop and makes a file with the time of spike of the neurons on the network 
+\begin{DoxyParams}{Parameters}
+{\em neuro\-\_\-spikes} & \-: the name of the file it will fill with the simulation time and the neuron that spiked \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+network.\-hpp\item 
+network.\-cpp\end{DoxyCompactItemize}
