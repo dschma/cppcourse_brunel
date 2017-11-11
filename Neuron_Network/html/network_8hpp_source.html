@@ -107,41 +107,42 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;std::vector&lt;Neurone&gt; <a class="code" href="classNetwork.html#a64758887eef67f258944f11770533b9d">getNetwork</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;~<a class="code" href="classNetwork.html">Network</a>();</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;std::vector&lt;Neurone&gt; network;               <span class="comment">//Neurons on a network</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;std::vector&lt;std::vector&lt;int&gt;&gt; connections;  <span class="comment">//Connections between neurons: matrice of int</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> nb_exc_neurons;                <span class="comment">//nombre neurones excitatoires</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> nb_inh_neurons;                <span class="comment">//nombre neurones inhibitoires</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keywordtype">double</span> g;                                   <span class="comment">//constante g = Ji/Je</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keywordtype">double</span> eta;                                 <span class="comment">//eta = nu_ext/nu_thr</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keywordtype">double</span> nu_ext;                              <span class="comment">//rate of spikes coming from outside the network, for each neuron</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;~<a class="code" href="classNetwork.html">Network</a>();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;std::vector&lt;Neurone&gt; network;               <span class="comment">//Neurons on a network</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;std::vector&lt;std::vector&lt;int&gt;&gt; connections;  <span class="comment">//Connections between neurons: matrice of int</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> nb_exc_neurons;                <span class="comment">//nombre neurones excitatoires</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> nb_inh_neurons;                <span class="comment">//nombre neurones inhibitoires</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keywordtype">double</span> g;                                   <span class="comment">//constante g = Ji/Je</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keywordtype">double</span> eta;                                 <span class="comment">//eta = nu_ext/nu_thr</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keywordtype">double</span> nu_ext;                              <span class="comment">//rate of spikes coming from outside the network, for each neuron</span></div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keywordtype">void</span> create_excitatory_neurons();</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keywordtype">void</span> create_inhibitory_neurons();</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keywordtype">void</span> create_connections();</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;};</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keywordtype">void</span> create_excitatory_neurons();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keywordtype">void</span> create_inhibitory_neurons();</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keywordtype">void</span> create_connections();</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;};</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="classNetwork_html"><div class="ttname"><a href="classNetwork.html">Network</a></div><div class="ttdoc">&lt; Class of network of neurons </div><div class="ttdef"><b>Definition:</b> network.hpp:14</div></div>
 <div class="ttc" id="classNetwork_html_a8f3b1732014562eaeb408aa18fd1f85e"><div class="ttname"><a href="classNetwork.html#a8f3b1732014562eaeb408aa18fd1f85e">Network::Network</a></div><div class="ttdeci">Network(int nb_exc_neurons, int nb_inh_neurons, double g=5, double eta=2)</div><div class="ttdef"><b>Definition:</b> network.cpp:8</div></div>
-<div class="ttc" id="classNetwork_html_a64758887eef67f258944f11770533b9d"><div class="ttname"><a href="classNetwork.html#a64758887eef67f258944f11770533b9d">Network::getNetwork</a></div><div class="ttdeci">std::vector&lt; Neurone &gt; getNetwork() const </div><div class="ttdef"><b>Definition:</b> network.cpp:149</div></div>
+<div class="ttc" id="classNetwork_html_a64758887eef67f258944f11770533b9d"><div class="ttname"><a href="classNetwork.html#a64758887eef67f258944f11770533b9d">Network::getNetwork</a></div><div class="ttdeci">std::vector&lt; Neurone &gt; getNetwork() const </div><div class="ttdef"><b>Definition:</b> network.cpp:106</div></div>
 <div class="ttc" id="classNetwork_html_a3cae76dd438d3116286ac03950e4e456"><div class="ttname"><a href="classNetwork.html#a3cae76dd438d3116286ac03950e4e456">Network::simulation</a></div><div class="ttdeci">void simulation(const std::string &amp;neuro_spikes)</div><div class="ttdef"><b>Definition:</b> network.cpp:20</div></div>
-<div class="ttc" id="classNetwork_html_a438438cda176520bb01437e0fd12e266"><div class="ttname"><a href="classNetwork.html#a438438cda176520bb01437e0fd12e266">Network::pass_spike</a></div><div class="ttdeci">void pass_spike(const int &amp;simtime, int neuron_i)</div><div class="ttdef"><b>Definition:</b> network.cpp:61</div></div>
-<div class="ttc" id="classNetwork_html_af6bbff655263ceccaad427e91c269da3"><div class="ttname"><a href="classNetwork.html#af6bbff655263ceccaad427e91c269da3">Network::getConnections</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; int &gt; &gt; getConnections() const </div><div class="ttdef"><b>Definition:</b> network.cpp:144</div></div>
+<div class="ttc" id="classNetwork_html_a438438cda176520bb01437e0fd12e266"><div class="ttname"><a href="classNetwork.html#a438438cda176520bb01437e0fd12e266">Network::pass_spike</a></div><div class="ttdeci">void pass_spike(const int &amp;simtime, int neuron_i)</div><div class="ttdef"><b>Definition:</b> network.cpp:48</div></div>
+<div class="ttc" id="classNetwork_html_af6bbff655263ceccaad427e91c269da3"><div class="ttname"><a href="classNetwork.html#af6bbff655263ceccaad427e91c269da3">Network::getConnections</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; int &gt; &gt; getConnections() const </div><div class="ttdef"><b>Definition:</b> network.cpp:101</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Nov 5 2017 17:11:20 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Nov 11 2017 10:42:10 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

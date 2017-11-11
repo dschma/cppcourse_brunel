@@ -3,6 +3,11 @@
 #include "constantes.hpp"
 #include <string>
 
+/**
+ * Experiments to simulate figure 8 from Brunel's paper 
+ * Each experiment calls the Network with different values of g and eta, making different behaviors on the network. 
+ */
+
 void experimentA()
 {
 	double gA(3.0);

@@ -1,6 +1,10 @@
 #ifndef CONST_H
 #define CONST_H
 
+/**
+ * Simulations and Neuron constants
+ */
+
 //-------------------------------Simultion constantes-------------------------------
 constexpr int t_start(0);									//simulation start time
 constexpr int t_stop(10000);									//simulation stop time

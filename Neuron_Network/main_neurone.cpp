@@ -2,8 +2,10 @@
 #include "constantes.hpp"
 #include "network.hpp"
 #include "experiment.cpp"
-#include <random>
-#include <iostream>
+
+/**
+ * Main: call the 4 experiments
+ */
 
 int main()
 {

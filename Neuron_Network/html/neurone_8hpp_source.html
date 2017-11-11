@@ -113,51 +113,52 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; <span class="keywordtype">void</span> <a class="code" href="classNeurone.html#a326b1657899bfa55f0e739fbcf28dd33">set_ext_I</a>(<span class="keyword">const</span> <span class="keywordtype">double</span>&amp; new_I);</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classNeurone.html#a77818d9f85c5576aa6c222816aaa2639">update</a>(<span class="keyword">const</span> <span class="keywordtype">int</span>&amp; poisson);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classNeurone.html#a332575021e6a883b253b6d09e3f74cb6">isRefractory</a>();</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classNeurone.html#a547dd526baaf8757443c0ff8edd3ef07">addSpikeTime</a>(<span class="keywordtype">int</span> time);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classNeurone.html#abd2b5e812d7790520480a8f2e96cb7bc">affiche</a>();</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        </div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classNeurone.html#add5643c0abaa809b78e52b24978777a2">receive_spike</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> time_arrival, <span class="keywordtype">double</span> j);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;std::vector&lt;int&gt; <a class="code" href="classNeurone.html#a089b4052f5bd2eb77d081ba8399a9c7a">getSpikes</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="keywordtype">double</span> <a class="code" href="classNeurone.html#ac5775ec28569770d61da92bd80400bd6">get_spike_buffer</a>(<span class="keywordtype">int</span> time) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    </div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordtype">double</span> potential;                           </div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> nb_spikes;                     </div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordtype">double</span> I_ext;                               </div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    std::vector&lt;int&gt; times_spikes;              </div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordtype">int</span> my_time;                                </div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    std::vector&lt;double&gt; spike_buffer;           </div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordtype">double</span> J;                                   </div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;};</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classNeurone.html#a332575021e6a883b253b6d09e3f74cb6">isRefractory</a>();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classNeurone.html#a547dd526baaf8757443c0ff8edd3ef07">addSpikeTime</a>(<span class="keywordtype">int</span> time);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classNeurone.html#abd2b5e812d7790520480a8f2e96cb7bc">affiche</a>();</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classNeurone.html#add5643c0abaa809b78e52b24978777a2">receive_spike</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> time_arrival, <span class="keywordtype">double</span> j);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;std::vector&lt;int&gt; <a class="code" href="classNeurone.html#a089b4052f5bd2eb77d081ba8399a9c7a">getSpikes</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="keywordtype">double</span> <a class="code" href="classNeurone.html#ac5775ec28569770d61da92bd80400bd6">get_spike_buffer</a>(<span class="keywordtype">int</span> time) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordtype">double</span> potential;                           </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> nb_spikes;                     </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordtype">double</span> I_ext;                               </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    std::vector&lt;int&gt; times_spikes;              </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordtype">int</span> my_time;                                </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    std::vector&lt;double&gt; spike_buffer;           </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordtype">double</span> J;                                   </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;};</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="classNeurone_html_a47d575ac043af29b5d3071264372d794"><div class="ttname"><a href="classNeurone.html#a47d575ac043af29b5d3071264372d794">Neurone::Neurone</a></div><div class="ttdeci">Neurone(double J_)</div><div class="ttdef"><b>Definition:</b> neurone.cpp:8</div></div>
-<div class="ttc" id="classNeurone_html_a756fb380904ac62b6c9484779db12285"><div class="ttname"><a href="classNeurone.html#a756fb380904ac62b6c9484779db12285">Neurone::setPotential</a></div><div class="ttdeci">void setPotential(double new_potential)</div><div class="ttdef"><b>Definition:</b> neurone.cpp:42</div></div>
-<div class="ttc" id="classNeurone_html_ac5775ec28569770d61da92bd80400bd6"><div class="ttname"><a href="classNeurone.html#ac5775ec28569770d61da92bd80400bd6">Neurone::get_spike_buffer</a></div><div class="ttdeci">double get_spike_buffer(int time) const </div></div>
-<div class="ttc" id="classNeurone_html_add5643c0abaa809b78e52b24978777a2"><div class="ttname"><a href="classNeurone.html#add5643c0abaa809b78e52b24978777a2">Neurone::receive_spike</a></div><div class="ttdeci">void receive_spike(unsigned int time_arrival, double j)</div><div class="ttdef"><b>Definition:</b> neurone.cpp:100</div></div>
-<div class="ttc" id="classNeurone_html_abd2b5e812d7790520480a8f2e96cb7bc"><div class="ttname"><a href="classNeurone.html#abd2b5e812d7790520480a8f2e96cb7bc">Neurone::affiche</a></div><div class="ttdeci">void affiche()</div><div class="ttdef"><b>Definition:</b> neurone.cpp:109</div></div>
-<div class="ttc" id="classNeurone_html_a4087ddf933a030150a47021b6cfa17b9"><div class="ttname"><a href="classNeurone.html#a4087ddf933a030150a47021b6cfa17b9">Neurone::getLastSpikeTime</a></div><div class="ttdeci">int getLastSpikeTime() const </div><div class="ttdef"><b>Definition:</b> neurone.cpp:52</div></div>
+<div class="ttc" id="classNeurone_html_a756fb380904ac62b6c9484779db12285"><div class="ttname"><a href="classNeurone.html#a756fb380904ac62b6c9484779db12285">Neurone::setPotential</a></div><div class="ttdeci">void setPotential(double new_potential)</div><div class="ttdef"><b>Definition:</b> neurone.cpp:47</div></div>
+<div class="ttc" id="classNeurone_html_ac5775ec28569770d61da92bd80400bd6"><div class="ttname"><a href="classNeurone.html#ac5775ec28569770d61da92bd80400bd6">Neurone::get_spike_buffer</a></div><div class="ttdeci">double get_spike_buffer(int time) const </div><div class="ttdef"><b>Definition:</b> neurone.cpp:42</div></div>
+<div class="ttc" id="classNeurone_html_add5643c0abaa809b78e52b24978777a2"><div class="ttname"><a href="classNeurone.html#add5643c0abaa809b78e52b24978777a2">Neurone::receive_spike</a></div><div class="ttdeci">void receive_spike(unsigned int time_arrival, double j)</div><div class="ttdef"><b>Definition:</b> neurone.cpp:106</div></div>
+<div class="ttc" id="classNeurone_html_abd2b5e812d7790520480a8f2e96cb7bc"><div class="ttname"><a href="classNeurone.html#abd2b5e812d7790520480a8f2e96cb7bc">Neurone::affiche</a></div><div class="ttdeci">void affiche()</div><div class="ttdef"><b>Definition:</b> neurone.cpp:114</div></div>
+<div class="ttc" id="classNeurone_html_a4087ddf933a030150a47021b6cfa17b9"><div class="ttname"><a href="classNeurone.html#a4087ddf933a030150a47021b6cfa17b9">Neurone::getLastSpikeTime</a></div><div class="ttdeci">int getLastSpikeTime() const </div><div class="ttdef"><b>Definition:</b> neurone.cpp:57</div></div>
 <div class="ttc" id="classNeurone_html_a8a2f3bfb5d8ee23baa9d2762621e3378"><div class="ttname"><a href="classNeurone.html#a8a2f3bfb5d8ee23baa9d2762621e3378">Neurone::getNbSpikes</a></div><div class="ttdeci">unsigned int getNbSpikes() const </div><div class="ttdef"><b>Definition:</b> neurone.cpp:22</div></div>
 <div class="ttc" id="classNeurone_html_a1ab9d547a38bae61bf5c526a76f7f570"><div class="ttname"><a href="classNeurone.html#a1ab9d547a38bae61bf5c526a76f7f570">Neurone::get_I_ext</a></div><div class="ttdeci">int get_I_ext() const </div><div class="ttdef"><b>Definition:</b> neurone.cpp:27</div></div>
-<div class="ttc" id="classNeurone_html_a326b1657899bfa55f0e739fbcf28dd33"><div class="ttname"><a href="classNeurone.html#a326b1657899bfa55f0e739fbcf28dd33">Neurone::set_ext_I</a></div><div class="ttdeci">void set_ext_I(const double &amp;new_I)</div><div class="ttdef"><b>Definition:</b> neurone.cpp:47</div></div>
+<div class="ttc" id="classNeurone_html_a326b1657899bfa55f0e739fbcf28dd33"><div class="ttname"><a href="classNeurone.html#a326b1657899bfa55f0e739fbcf28dd33">Neurone::set_ext_I</a></div><div class="ttdeci">void set_ext_I(const double &amp;new_I)</div><div class="ttdef"><b>Definition:</b> neurone.cpp:52</div></div>
 <div class="ttc" id="classNeurone_html_a089b4052f5bd2eb77d081ba8399a9c7a"><div class="ttname"><a href="classNeurone.html#a089b4052f5bd2eb77d081ba8399a9c7a">Neurone::getSpikes</a></div><div class="ttdeci">std::vector&lt; int &gt; getSpikes() const </div><div class="ttdef"><b>Definition:</b> neurone.cpp:37</div></div>
-<div class="ttc" id="classNeurone_html_a77818d9f85c5576aa6c222816aaa2639"><div class="ttname"><a href="classNeurone.html#a77818d9f85c5576aa6c222816aaa2639">Neurone::update</a></div><div class="ttdeci">bool update(const int &amp;poisson)</div><div class="ttdef"><b>Definition:</b> neurone.cpp:74</div></div>
-<div class="ttc" id="classNeurone_html_a332575021e6a883b253b6d09e3f74cb6"><div class="ttname"><a href="classNeurone.html#a332575021e6a883b253b6d09e3f74cb6">Neurone::isRefractory</a></div><div class="ttdeci">bool isRefractory()</div><div class="ttdef"><b>Definition:</b> neurone.cpp:60</div></div>
+<div class="ttc" id="classNeurone_html_a77818d9f85c5576aa6c222816aaa2639"><div class="ttname"><a href="classNeurone.html#a77818d9f85c5576aa6c222816aaa2639">Neurone::update</a></div><div class="ttdeci">bool update(const int &amp;poisson)</div><div class="ttdef"><b>Definition:</b> neurone.cpp:79</div></div>
+<div class="ttc" id="classNeurone_html_a332575021e6a883b253b6d09e3f74cb6"><div class="ttname"><a href="classNeurone.html#a332575021e6a883b253b6d09e3f74cb6">Neurone::isRefractory</a></div><div class="ttdeci">bool isRefractory()</div><div class="ttdef"><b>Definition:</b> neurone.cpp:65</div></div>
 <div class="ttc" id="classNeurone_html_a81f418a2929da23aa6122014e67e977a"><div class="ttname"><a href="classNeurone.html#a81f418a2929da23aa6122014e67e977a">Neurone::getPotential</a></div><div class="ttdeci">double getPotential() const </div><div class="ttdef"><b>Definition:</b> neurone.cpp:17</div></div>
 <div class="ttc" id="classNeurone_html_a0a1f8d8b3d7a13ea518fb502e474674f"><div class="ttname"><a href="classNeurone.html#a0a1f8d8b3d7a13ea518fb502e474674f">Neurone::get_J</a></div><div class="ttdeci">double get_J() const </div><div class="ttdef"><b>Definition:</b> neurone.cpp:32</div></div>
-<div class="ttc" id="classNeurone_html_a547dd526baaf8757443c0ff8edd3ef07"><div class="ttname"><a href="classNeurone.html#a547dd526baaf8757443c0ff8edd3ef07">Neurone::addSpikeTime</a></div><div class="ttdeci">void addSpikeTime(int time)</div><div class="ttdef"><b>Definition:</b> neurone.cpp:69</div></div>
+<div class="ttc" id="classNeurone_html_a547dd526baaf8757443c0ff8edd3ef07"><div class="ttname"><a href="classNeurone.html#a547dd526baaf8757443c0ff8edd3ef07">Neurone::addSpikeTime</a></div><div class="ttdeci">void addSpikeTime(int time)</div><div class="ttdef"><b>Definition:</b> neurone.cpp:74</div></div>
 <div class="ttc" id="classNeurone_html"><div class="ttname"><a href="classNeurone.html">Neurone</a></div><div class="ttdoc">&lt; Class of neurons objects </div><div class="ttdef"><b>Definition:</b> neurone.hpp:13</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Nov 5 2017 17:11:20 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Nov 11 2017 10:42:10 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
